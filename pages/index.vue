@@ -1,12 +1,23 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        nuxt-strapi-blog-frontend
-      </h1>
-      <div v-for="article in articles" v-bind:key="article.id">
-        <h2>{{ article.title }}</h2>
+  <div class="home">
+    <h1 class="headline center">Blog</h1>
+    <div class="sections">
+      <div class="group">
+        <div
+          v-for="article in articles"
+          v-bind:key="article.id"
+          class="section"
+        >
+          <div class="entry">
+            <nuxt-link :to="{ path: article.slug, query: { id: article.id } }">
+              <h3>
+                {{ article.title }}
+                <span class="subtitle">{{ article.date }}</span>
+              </h3>
+            </nuxt-link>
+            <p>{{ article.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
