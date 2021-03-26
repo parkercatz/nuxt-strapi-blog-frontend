@@ -30,34 +30,50 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.center {
   text-align: center;
 }
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+.headline {
+  text-transform: uppercase;
+  margin: 4rem auto;
+  font-size: 4rem;
+}
+img {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  margin: 0 auto;
+  width: 150px;
+}
+h2 {
   color: #35495e;
-  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+h3 {
+  color: #42b883;
+  margin-bottom: 0;
+  cursor: pointer;
 }
-
-.links {
-  padding-top: 15px;
+h3 > .subtitle {
+  color: gray;
+  font-size: 0.98rem;
+  float: right;
+  font-weight: normal;
+}
+h3:hover {
+  text-decoration: underline;
+}
+p {
+  margin-top: 0.4rem;
+}
+.sections {
+  max-width: 40vw;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+.section {
+  margin-bottom: 3rem;
+}
+.group {
+  margin-bottom: 4rem;
 }
 </style>
