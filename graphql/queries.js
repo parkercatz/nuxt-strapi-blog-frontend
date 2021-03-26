@@ -14,8 +14,8 @@ export const allArticlesQuery = gql`
 `;
 
 export const singleArticleQuery = gql`
-  query singleArticleQuery {
-    article(id: 1) {
+  query singleArticleQuery($id: ID!) {
+    article(id: $id) {
       id
       title
       date
